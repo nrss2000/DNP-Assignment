@@ -15,6 +15,8 @@ public class PostInMemoryRepository : IPostRepository
     {
         posts.Add(new Post{Body = "Post no.1",Id = 1,Title = "Post1",UserId = 1});
         posts.Add(new Post{Body = "Post no.2",Id = 2,Title = "Post2",UserId = 2});
+        posts.Add(new Post{Body = "Post no.3",Id = 3,Title = "Post3",UserId = 3});
+        posts.Add(new Post{Body = "Post no.4",Id = 4,Title = "Post4",UserId = 1});
     }
     
     public Task<Post> AddAsync(Post post)

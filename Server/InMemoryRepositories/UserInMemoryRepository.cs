@@ -15,6 +15,8 @@ public class UserInMemoryRepository : IUserRepository
     {
         users.Add(new User {Id = 1,Password = "12345",Username = "User1"});
         users.Add(new User {Id = 2,Password = "12345",Username = "User2"});
+        users.Add(new User {Id = 3,Password = "12345",Username = "User3"});
+        users.Add(new User {Id = 4,Password = "12345",Username = "User4"});
     }
     
     public Task<User> AddAsync(User user)

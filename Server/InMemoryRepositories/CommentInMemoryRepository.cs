@@ -9,8 +9,10 @@ public class CommentInMemoryRepository : ICommentRepository
 
     public CommentInMemoryRepository()
     {
-        comments.Add(new Comment{Body="I dont like this post",Id = 1,UserId = 1});
-        comments.Add(new Comment{Body="I like this post",Id = 2,UserId = 2});
+        comments.Add(new Comment{Body="I dont like this post",Id = 1,UserId = 1,PostId = 1});
+        comments.Add(new Comment{Body="I like this post",Id = 2,UserId = 2,PostId = 2});
+        comments.Add(new Comment{Body="Nice one",Id = 3,UserId = 3,PostId = 1});
+        comments.Add(new Comment{Body="Thanks for sharing",Id = 4,UserId = 4,PostId = 3});
     }
     
     public Task<Comment> AddAsync(Comment comment)

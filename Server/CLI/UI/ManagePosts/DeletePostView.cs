@@ -1,4 +1,4 @@
-using Entities;
+﻿using Entities;
 using RepositoryContracts;
 
 namespace CLI.UI.ManagePosts;
@@ -19,7 +19,6 @@ public class DeletePostView
         int id = ConsoleInput.ReadInt("Post id");
         await postRepository.DeleteAsync(id);
 
-        // A comment without a post makes no sense, so remove them too.
         foreach (Comment comment in commentRepository.GetMany().Where(c => c.PostId == id).ToList())
         {
             await commentRepository.DeleteAsync(comment.Id);

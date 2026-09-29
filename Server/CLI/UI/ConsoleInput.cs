@@ -1,4 +1,4 @@
-namespace CLI.UI;
+﻿namespace CLI.UI;
 
 public static class ConsoleInput
 {
@@ -16,7 +16,6 @@ public static class ConsoleInput
         }
     }
 
-    // Returns null when the user just presses enter (used for optional input).
     public static string? ReadOptional(string prompt)
     {
         Console.Write($"{prompt}: ");
